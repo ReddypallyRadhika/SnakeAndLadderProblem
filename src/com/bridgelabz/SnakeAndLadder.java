@@ -22,6 +22,9 @@ public class SnakeAndLadder {
 	 * The Player rolls the die to get a number between 1 to 6.
 	 * - Use ((RANDOM)) to get the number between 1 to 6
 	 */
+	/*UC3
+	 * The Player then checks for a Option. They are No Play, Ladder or Snake.
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc= new Scanner(System.in);
