@@ -38,13 +38,13 @@ public class SnakeAndLadder {
         if(randomOption ==1)
         {
         	 System.out.println("Ladder");
-        	 playerposition++;
+        	 playerposition=rolldie+playerposition;
         	 System.out.println("player position:"+playerposition);
         }
         else if(randomOption ==2)
             {
             	 System.out.println("Snake");
-            	 playerposition--;
+            	 playerposition=playerposition-rolldie;
             	 System.out.println("player position:"+playerposition);
             }
         else
