@@ -31,6 +31,16 @@ public class SnakeAndLadder {
 	 *  then the player restarts from 0
 	 * 
 	 */
+	/*
+	 * UC5
+	 * Ensure the player gets to exact winning position 100.
+	 *  - Note in case the player position go above 100, 
+	 *  the player stays in the same previous position till the player gets the exact number that adds to 100
+	 */
+	/*
+	 * UC6
+	 * Report the number of times the dice was played to win the game and also the position after every die role
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc= new Scanner(System.in);
@@ -38,11 +48,13 @@ public class SnakeAndLadder {
         String player= sc.next();
         int playerposition=0;
         int playernewposition = 0;
+        int winningposition = 100;
         int count= 0;
         System.out.println("player position:"+playerposition);
         int rolldie = (int) (Math.floor(Math.random()*10)%7);
-        while(playernewposition<1)
+        while(playernewposition<1 || playernewposition!=winningposition)
        {
+        	
     	  System.out.println("restart game");
         for(playerposition=0;playerposition<=100;playerposition=rolldie+playernewposition)
         {
@@ -70,20 +82,21 @@ public class SnakeAndLadder {
 	     }
         
         
-        int winningposition = 100;
+       
         
         if(playernewposition>=winningposition)
     	{
         	System.out.println("player position:"+playernewposition);
         	System.out.println("Stop");
         }
-		
+        ++count;
+	    
+	  
         }
-        
-		
+    
 		  
      }
-     
+        System.out.println("Total Number Of Times Die Rolled: " + count);
       
 	}   
 	
