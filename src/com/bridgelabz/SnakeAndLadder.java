@@ -31,30 +31,47 @@ public class SnakeAndLadder {
         System.out.println("Enter the name of the player:");
         String player= sc.next();
         int playerposition=0;
+        int playernewposition = 0;
+        int count= 0;
         System.out.println("player position:"+playerposition);
-        int rolldie = (int) (Math.floor(Math.random()*10)%7);
+       int rolldie = (int) (Math.floor(Math.random()*10)%7);
         //int rolldie =(int) Math.random();
        // System.out.println("player rolldie:"+rolldie);
-        int randomOption =(int) (Math.floor(Math.random()*10)%4);
+      //  int randomOption =(int) (Math.floor(Math.random()*10)%4);
        // int randomOption =(int) (Math.random()*1)%3;
-        System.out.println(randomOption);
+       // System.out.println(randomOption);
+      while(playernewposition<1)
+      {
+    	  System.out.println("restart game");
+        for(playerposition=0;playerposition<=100;playerposition=rolldie+playernewposition)
+        {
+        	
+        	
+        	int randomOption =(int) (Math.floor(Math.random()*10)%4);
+        
+        	System.out.println(randomOption);
         if(randomOption ==1)
         {
         	 System.out.println("Ladder");
-        	 playerposition=rolldie+playerposition;
-        	 System.out.println("player position:"+playerposition);
+        	 playernewposition=rolldie+playernewposition;
+        	 System.out.println("player position:"+playernewposition);
         }
         else if(randomOption ==2)
             {
             	 System.out.println("Snake");
-            	 playerposition=playerposition-rolldie;
-            	 System.out.println("player position:"+playerposition);
+            	 playernewposition=playernewposition-rolldie;
+            	 System.out.println("player position:"+playernewposition);
             }
-        else
+       else
         {
         	System.out.println("No Play");
-        	 System.out.println("player position:"+playerposition);
-	}
-
+        	 System.out.println("player position:"+playernewposition);
+	     }
+        
+      
+     }
+      
+	}   
+	
 }
 }
