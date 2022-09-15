@@ -25,6 +25,12 @@ public class SnakeAndLadder {
 	/*UC3
 	 * The Player then checks for a Option. They are No Play, Ladder or Snake.
 	 */
+	/*UC4
+	 * Repeat till the Player reaches the winning position 100. 
+	 * - Note In case the player position moves below 0,
+	 *  then the player restarts from 0
+	 * 
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc= new Scanner(System.in);
@@ -34,14 +40,9 @@ public class SnakeAndLadder {
         int playernewposition = 0;
         int count= 0;
         System.out.println("player position:"+playerposition);
-       int rolldie = (int) (Math.floor(Math.random()*10)%7);
-        //int rolldie =(int) Math.random();
-       // System.out.println("player rolldie:"+rolldie);
-      //  int randomOption =(int) (Math.floor(Math.random()*10)%4);
-       // int randomOption =(int) (Math.random()*1)%3;
-       // System.out.println(randomOption);
-      while(playernewposition<1)
-      {
+        int rolldie = (int) (Math.floor(Math.random()*10)%7);
+        while(playernewposition<1)
+       {
     	  System.out.println("restart game");
         for(playerposition=0;playerposition<=100;playerposition=rolldie+playernewposition)
         {
