@@ -69,10 +69,23 @@ public class SnakeAndLadder {
         	 System.out.println("player position:"+playernewposition);
 	     }
         
-      
+        
+        int winningposition = 100;
+        
+        if(playernewposition>=winningposition)
+    	{
+        	System.out.println("player position:"+playernewposition);
+        	System.out.println("Stop");
+        }
+		
+        }
+        
+		
+		  
      }
+     
       
 	}   
 	
-}
+
 }
